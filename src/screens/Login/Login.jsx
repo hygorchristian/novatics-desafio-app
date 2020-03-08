@@ -42,10 +42,10 @@ function Login() {
         <Input
           placeholder="Username"
           value={username}
-          ChangeText={value => setUsername(value)}
+          onChangeText={value => setUsername(value)}
           icon="github-face"
         />
-        <Button  onPress={handleLogin}>Login</Button>
+        <Button onPress={handleLogin}>Login</Button>
       </Content>
     </Container>
   )

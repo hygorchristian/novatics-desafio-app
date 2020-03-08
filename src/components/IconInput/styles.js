@@ -16,6 +16,7 @@ export const Input = styled.TextInput`
   flex: 1;
   margin-top: 4px;
   margin-left: 10px;
+  color: ${colors.textPrimary};
 `;
 
 export const Icon = styled(MDIcon).attrs({

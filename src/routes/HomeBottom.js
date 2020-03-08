@@ -79,6 +79,9 @@ const HomeBottom = createBottomTabNavigator(
   },
   {
     tabBarComponent: BottomTabs,
+    tabBarOptions: {
+      activeTintColor: '#81B247',
+    },
   }
 );
 

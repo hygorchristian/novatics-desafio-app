@@ -3,6 +3,7 @@ export default {
   primaryLight: '#7762EE',
   secondary: '#FFB127',
   secondaryLight: '#FFD454',
+  secondaryAlpha: 'rgba(255,177,39,0.2)',
   textPrimary: 'rgba(255,255,255,.87)',
   textSecondary: 'rgba(255,255,255,.6)',
   textLight: '#A09F9D',
