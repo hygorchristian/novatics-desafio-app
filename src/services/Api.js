@@ -45,7 +45,9 @@ class ApiService {
   // ===========================================================================
 
   getPoints = id => this.api.get(`/users/${id}/points`);
-  savePoint = (id, code) => this.api.post('users/${id}/points', { code });
+  savePoint = (id, code) => this.api.post('/users/${id}/points', { code });
+
+  getLeaderboards = () => this.api.get('/leaderboards');
 }
 
 export default new ApiService();
