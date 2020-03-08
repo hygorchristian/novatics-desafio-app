@@ -1,27 +1,55 @@
 import styled from 'styled-components/native';
 import colors from '~/assets/colors';
+import { SCREEN_WIDTH } from '~/utils/dimensions';
+import ButtonBase from '~/components/Button';
+import Montserrat from '~/components/Montserrat';
+import IconInput from '~/components/IconInput';
 
 export const Container = styled.View`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: ${colors.background};
 `;
 
-export const Text = styled.Text`
-  margin-bottom: 20px;
-  font-size: 20px;
+export const Image = styled.Image.attrs({
+  resizeMode: 'cover',
+})`
+  width: ${SCREEN_WIDTH}px;
+  height: ${SCREEN_WIDTH * 0.8}px;
+  margin-top: 40px;
+`;
+
+export const Content = styled.View`
+  background-color: #323344;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+`;
+
+export const Welcome = styled(Montserrat).attrs({
+  weight: 'bold',
+})`
+  width: ${SCREEN_WIDTH - 48};
+  font-size: 24px;
   color: ${colors.textPrimary};
 `;
 
-export const Input = styled.TextInput.attrs({
+export const Text = styled(Montserrat)`
+  width: ${SCREEN_WIDTH - 48};
+  font-size: 24px;
+  color: ${colors.textPrimary};
+`;
+
+export const Input = styled(IconInput).attrs({
   placeholderTextColor: colors.textSecondary,
 })`
-  width: 200px;
-  height: 48px;
-  background-color: ${colors.input};
-  color: ${colors.textPrimary};
+  width: ${SCREEN_WIDTH - 48};
   margin-bottom: 20px;
-  padding-horizontal: 16px;
+  margin-top: 24px;
+`;
+
+export const Button = styled(ButtonBase)`
+  width: ${SCREEN_WIDTH - 48};
+  height: 48px;
 `;

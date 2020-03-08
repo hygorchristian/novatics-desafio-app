@@ -1,8 +1,8 @@
 export default {
-  primary: '#076897',
-  primaryLight: '#4583A1',
-  secondary: '#31AD78',
-  secondaryLight: '#658879',
+  primary: '#3D37A0',
+  primaryLight: '#7762EE',
+  secondary: '#FFB127',
+  secondaryLight: '#FFD454',
   textPrimary: 'rgba(255,255,255,.87)',
   textSecondary: 'rgba(255,255,255,.6)',
   textLight: '#A09F9D',
