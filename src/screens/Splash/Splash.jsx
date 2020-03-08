@@ -1,8 +1,11 @@
 import React, {useEffect} from 'react';
+import { StatusBar } from "react-native";
 import { useNavigation } from "react-navigation-hooks";
 
-import { Container } from './styles';
+import { Container , Text, LoadingContainer, LogoContainer, Logo, Loading} from './styles';
 import { useSelector } from "react-redux";
+
+import splash from '~/assets/img/splash.png'
 
 function Splash() {
   const navigation = useNavigation()
@@ -17,13 +20,28 @@ function Splash() {
   }
 
   useEffect(() => {
+    StatusBar.setBarStyle('light-content');
+    StatusBar.setBackgroundColor('#000000');
     setTimeout(() =>{
       handleNavigation()
-    }, 1000)
-
+    }, 3000)
   }, [])
 
-  return <Container />
+  return (
+    <Container>
+      <LogoContainer>
+        <Logo source={splash} />
+      </LogoContainer>
+      <Text>Loading leaderboards...</Text>
+      <LoadingContainer>
+        <Loading />
+      </LoadingContainer>
+    </Container>
+  )
 }
 
 export default Splash;
+
+
+
+
