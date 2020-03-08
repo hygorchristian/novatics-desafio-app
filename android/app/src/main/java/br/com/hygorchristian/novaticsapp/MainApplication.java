@@ -1,4 +1,4 @@
-package com.app;
+package br.com.hygorchristian.novaticsapp;
 
 import android.app.Application;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package com.app;
+package br.com.hygorchristian.novaticsapp;
 
 import com.facebook.react.ReactActivity;
 

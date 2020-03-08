@@ -1,9 +1,19 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Name, Username } from './styles';
+import { useSelector } from "react-redux";
 
 function Profile() {
-  return <Container />
+  const user = useSelector(state => state.auth.user)
+
+  if(!user) return null
+
+  return (
+    <Container>
+      <Name>{user.name}</Name>
+      <Username>{user.username}</Username>
+    </Container>
+  )
 }
 
 export default Profile;

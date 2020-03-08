@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.app"
+        applicationId "br.com.hygorchristian.novaticsapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

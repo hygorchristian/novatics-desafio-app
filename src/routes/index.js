@@ -3,7 +3,6 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import Splash from '~/screens/Splash';
 import Login from '~/screens/Login';
-import Perfil from '~/screens/Perfil';
 import HomeBottom from '~/routes/HomeBottom';
 
 const MainStack = createStackNavigator(
@@ -23,13 +22,6 @@ const MainStack = createStackNavigator(
 );
 
 const Routes = createSwitchNavigator({
-  MainStack: {
-    screen: MainStack,
-    navigationOptions: {
-      header: null,
-      gesturesEnabled: false,
-    },
-  },
   Splash: {
     screen: Splash,
     navigationOptions: {
@@ -44,13 +36,13 @@ const Routes = createSwitchNavigator({
       gesturesEnabled: false,
     },
   },
-  // MainStack: {
-  //   screen: MainStack,
-  //   navigationOptions: {
-  //     header: null,
-  //     gesturesEnabled: false,
-  //   },
-  // },
+  MainStack: {
+    screen: MainStack,
+    navigationOptions: {
+      header: null,
+      gesturesEnabled: false,
+    },
+  },
 });
 
 export default createAppContainer(Routes);

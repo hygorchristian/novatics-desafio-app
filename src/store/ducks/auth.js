@@ -4,9 +4,10 @@ import Immutable from 'seamless-immutable';
 // Action Types & Creators
 
 const { Types, Creators } = createActions({
-  loadAuthRequest: ['email', 'password'],
+  loadAuthRequest: ['username'],
   loadAuthSuccess: ['data'],
   loadAuthFailure: ['error'],
+  setJwtToken: ['token'],
   logout: null,
 });
 
@@ -20,6 +21,7 @@ export const INITIAL_STATE = Immutable({
   user: null,
   loading: false,
   error: null,
+  token: null,
 });
 
 // Reducer Functions
@@ -41,11 +43,14 @@ const logout = state => ({
   isAuth: false,
 });
 
+const setJwtToken = (state, { token }) => ({ ...state, token });
+
 // Reducer
 
 export const AuthReducer = createReducer(INITIAL_STATE, {
   [Types.LOAD_AUTH_REQUEST]: loadRequest,
   [Types.LOAD_AUTH_SUCCESS]: loadSuccess,
   [Types.LOAD_AUTH_FAILURE]: loadFailure,
+  [Types.SET_JWT_TOKEN]: setJwtToken,
   [Types.LOGOUT]: logout,
 });

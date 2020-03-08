@@ -10,6 +10,7 @@ export default {
   // background: '#141418',
   background: '#141418',
   paper: '#212127',
+  input: '#323237',
   error: '#EE002B',
   errorOverlay: 'rgba(238,0,43,0.2)',
   separator: '#34343E',
