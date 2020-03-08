@@ -31,7 +31,9 @@ export const UserContainer = styled.View`
   justify-content: center;
 `;
 
-export const Name = styled(Montserrat)`
+export const Name = styled(Montserrat).attrs({
+  weight: 'semibold',
+})`
   margin-top: 30px;
   width: ${SCREEN_WIDTH - 30};
   font-size: 24px;

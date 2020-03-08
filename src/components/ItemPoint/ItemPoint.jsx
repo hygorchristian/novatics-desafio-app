@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { Container, Text, Image, Date, Info, Points, Value } from './styles';
+import { Container, Text, Icon, StarContainer, Date, Info, Points, Value } from './styles';
 
 function ItemPoint() {
   return (
     <Container>
-      <Image />
+      <StarContainer>
+        <Icon />
+      </StarContainer>
       <Info>
         <Text>You got 10 points</Text>
         <Date>Yesterday at 14:46</Date>

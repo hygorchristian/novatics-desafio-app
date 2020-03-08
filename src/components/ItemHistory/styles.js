@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
+import MDIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Montserrat from '~/components/Montserrat';
 import colors from '~/assets/colors';
-import MDIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const Container = styled.View`
   height: 40px;
@@ -13,7 +13,7 @@ export const StarContainer = styled.View`
   height: 40px;
   width: 40px;
   border-radius: 20px;
-  background-color: ${colors.primary};
+  background-color: ${colors.primaryLight};
   margin-left: 30px;
   flex-direction: row;
   align-items: center;
@@ -21,8 +21,8 @@ export const StarContainer = styled.View`
 `;
 
 export const Icon = styled(MDIcon).attrs({
-  size: 20,
-  name: 'trophy-outline',
+  size: 28,
+  name: 'star',
 })`
   color: ${colors.textPrimary};
 `;
@@ -39,7 +39,7 @@ export const Text = styled(Montserrat)`
   font-size: 13px;
 `;
 
-export const Date = styled(Montserrat)`
+export const DateText = styled(Montserrat)`
   font-size: 12px;
   color: ${colors.textSecondary};
 `;

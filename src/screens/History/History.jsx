@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import lodash from 'lodash';
 
 import Api from '~/services/Api';
-import { Container, Point } from './styles';
+import { Container, Point, Content, Title } from './styles';
 import { useSelector } from "react-redux";
 import { NavigationEvents } from "react-navigation";
+import Header from "~/components/Header";
+import ItemHistory from "~/components/ItemHistory";
 
 function History() {
   const [points, setPoints] = useState([]);
@@ -13,7 +16,8 @@ function History() {
     const response = await Api.getPoints(user.id).catch(err => console.log(err))
     if(response){
       const _points = response.data.points;
-      setPoints(_points)
+      const ordered = lodash.orderBy(_points, ['pivot.created_at'], ['desc'])
+      setPoints(ordered)
     }
   }
 
@@ -27,12 +31,15 @@ function History() {
       <NavigationEvents
         onWillFocus={fetchPoints}
       />
+
       <Container>
-        {points.map(point => {
-          return (
-            <Point>{point.title}</Point>
-          )
-        })}
+        <Header label="History" />
+        <Title>All Notifications</Title>
+        <Content
+          data={points}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) => <ItemHistory item={item} />}
+        />
       </Container>
     </>
   )
