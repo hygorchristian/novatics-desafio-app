@@ -1,0 +1,16 @@
+export default {
+  primary: '#076897',
+  primaryLight: '#4583A1',
+  secondary: '#31AD78',
+  secondaryLight: '#658879',
+  textPrimary: 'rgba(255,255,255,.87)',
+  textSecondary: 'rgba(255,255,255,.6)',
+  textLight: '#A09F9D',
+  inactive: 'rgba(255,255,255,.38)',
+  // background: '#141418',
+  background: '#141418',
+  paper: '#212127',
+  error: '#EE002B',
+  errorOverlay: 'rgba(238,0,43,0.2)',
+  separator: '#34343E',
+};

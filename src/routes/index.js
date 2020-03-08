@@ -1,17 +1,20 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import Main from '~/screens/Main';
+import Splash from '~/screens/Splash';
+import Login from '~/screens/Login';
+import Perfil from '~/screens/Perfil';
+import HomeBottom from '~/routes/HomeBottom';
 
-const Stack = createStackNavigator(
+const MainStack = createStackNavigator(
   {
-    // Screen: {
-    //   screen: Screen,
-    //   navigationOptions: {
-    //     header: null,
-    //     gesturesEnabled: false,
-    //   },
-    // },
+    HomeBottom: {
+      screen: HomeBottom,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false,
+      },
+    },
   },
   {
     // mode: 'modal',
@@ -20,15 +23,29 @@ const Stack = createStackNavigator(
 );
 
 const Routes = createSwitchNavigator({
-  Main: {
-    screen: Main,
+  MainStack: {
+    screen: MainStack,
     navigationOptions: {
       header: null,
       gesturesEnabled: false,
     },
   },
-  // Stack: {
-  //   screen: Stack,
+  Splash: {
+    screen: Splash,
+    navigationOptions: {
+      header: null,
+      gesturesEnabled: false,
+    },
+  },
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      header: null,
+      gesturesEnabled: false,
+    },
+  },
+  // MainStack: {
+  //   screen: MainStack,
   //   navigationOptions: {
   //     header: null,
   //     gesturesEnabled: false,
