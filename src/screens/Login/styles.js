@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import colors from '~/assets/colors';
-import { color } from 'react-native-reanimated';
 
 export const Container = styled.View`
   flex: 1;

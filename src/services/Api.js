@@ -44,18 +44,8 @@ class ApiService {
   // 01. Events
   // ===========================================================================
 
-  countEvent = (params = {}) => this.api.get('events/count', { params });
-
-  eventAddDonor = (id, donor_id) =>
-    this.api.put(`events/add/${id}`, { id: donor_id });
-
-  getEvent = (id, params = {}) => this.api.get(`events/${id}`, { params });
-
-  createEvent = data => this.api.post('events', data);
-
-  updateEvent = (id, data) => this.api.put(`events/${id}`, data);
-
-  deleteEvent = id => this.api.delete(`events/${id}`);
+  getPoints = id => this.api.get(`/users/${id}/points`);
+  savePoint = (id, code) => this.api.post('users/${id}/points', { code });
 }
 
 export default new ApiService();

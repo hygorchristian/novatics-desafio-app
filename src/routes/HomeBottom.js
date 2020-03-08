@@ -49,14 +49,14 @@ const HomeBottom = createBottomTabNavigator(
         tabBarLabel: () => null,
       },
     },
-    SearchScreen: {
+    CodeScreen: {
       screen: Code,
       navigationOptions: () => ({
         header: null,
         tabBarLabel: () => null,
         tabBarIcon: CodeIcon,
         tabBarOnPress: ({ navigation }) => {
-          navigation.navigate('Search');
+          navigation.navigate('Code');
         },
       }),
     },

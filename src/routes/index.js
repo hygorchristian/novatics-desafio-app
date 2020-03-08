@@ -4,6 +4,8 @@ import { createStackNavigator } from 'react-navigation-stack';
 import Splash from '~/screens/Splash';
 import Login from '~/screens/Login';
 import HomeBottom from '~/routes/HomeBottom';
+import Code from '~/screens/Code';
+import colors from '~/assets/colors';
 
 const MainStack = createStackNavigator(
   {
@@ -14,10 +16,20 @@ const MainStack = createStackNavigator(
         gesturesEnabled: false,
       },
     },
+    Code: {
+      screen: Code,
+      navigationOptions: {
+        header: null,
+        gesturesEnabled: false,
+        cardStyle: {
+          backgroundColor: colors.paper,
+        },
+      },
+    },
   },
   {
-    // mode: 'modal',
-    // headerMode: 'none',
+    mode: 'modal',
+    headerMode: 'none',
   }
 );
 
