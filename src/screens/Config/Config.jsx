@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { Container } from './styles';
-import Button from "~/components/Button";
+import { Container, ConfigLabel, Divider } from './styles';
 import { AuthActions } from "~/store/ducks/auth";
 import { useDispatch } from "react-redux";
 import { useNavigation } from "react-navigation-hooks";
+import Header from "~/components/Header";
+import ConfigButton from "~/components/ConfigButton";
 
 function Config() {
   const dispatch = useDispatch()
@@ -16,9 +17,23 @@ function Config() {
   }
 
   return (
-    <Container>
-      <Button onPress={onLogout}>Logout</Button>
-    </Container>
+    <>
+      <Header label="Configurations" />
+      <Container>
+        <ConfigLabel>Screen config</ConfigLabel>
+        <ConfigButton
+          withSwitch
+          icon="palette-outline"
+          onPress={() => {}}
+        >
+          Dark theme
+        </ConfigButton>
+        <Divider />
+        <ConfigLabel>Account</ConfigLabel>
+        <ConfigButton icon="power" onPress={onLogout}>Logout</ConfigButton>
+        <Divider />
+      </Container>
+    </>
   )
 }
 

@@ -8,6 +8,7 @@ import AuthProvider from '~/components/AuthProvider';
 
 import { store, persistor } from '~/store';
 import Routes from '~/routes';
+import colors from '~/assets/colors';
 
 console.disableYellowBox = true;
 
@@ -16,6 +17,7 @@ const theme = {
   roundness: 2,
   colors: {
     ...DefaultTheme.colors,
+    accent: colors.secondary,
   },
   dark: true,
 };
