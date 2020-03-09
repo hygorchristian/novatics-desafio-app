@@ -20,7 +20,7 @@ export const LogoContainer = styled.View`
 `;
 
 export const Image = styled.Image.attrs({
-  objectFit: 'contain',
+  resizeMode: 'contain',
 })`
   width: ${SCREEN_WIDTH - 80};
   height: ${SCREEN_WIDTH - 80};

@@ -23,9 +23,9 @@ function Splash() {
   useEffect(() => {
     StatusBar.setBarStyle('light-content');
     StatusBar.setBackgroundColor('#000000');
-    // setTimeout(() =>{
-    //   handleNavigation()
-    // }, 3000)
+    setTimeout(() =>{
+      handleNavigation()
+    }, 4000)
   }, [])
 
   return (
