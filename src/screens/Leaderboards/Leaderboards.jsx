@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import Api from '~/services/Api';
 
-import { Container, Text, UserContainer } from './styles';
+import { Container, Text, UserContainer, Ornament, Title, List } from './styles';
+import Header from "~/components/Header";
+import ItemLeaderboard from "~/components/ItemLeaderboard";
+import { NavigationEvents } from "react-navigation";
 
 function Leaderboards() {
   const [data, setData] = useState([])
@@ -19,14 +22,21 @@ function Leaderboards() {
   }, [])
 
   return (
-    <Container>
-      {data.map((user, index) => (
-        <UserContainer>
-          <Text>#{index + 1}</Text>
-          <Text>{user.name}</Text>
-        </UserContainer>
-      ))}
-    </Container>
+    <>
+      <NavigationEvents
+        onWillFocus={fetchLeaderboards}
+      />
+      <Container>
+        <Header label="Leaderboards" />
+        <Ornament />
+        <Title>All users score</Title>
+        <List
+          data={data}
+          keyExtractor={item => item.id}
+          renderItem={({item, index}) => <ItemLeaderboard index={index + 1} item={item} />}
+        />
+      </Container>
+    </>
   )
 }
 

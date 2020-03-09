@@ -15,4 +15,7 @@ export default {
   error: '#EE002B',
   errorOverlay: 'rgba(238,0,43,0.2)',
   separator: '#34343E',
+  gold: '#FFB127',
+  silver: '#a5c1d0',
+  bronze: '#914136',
 };

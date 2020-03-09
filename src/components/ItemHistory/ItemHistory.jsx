@@ -9,7 +9,6 @@ function ItemHistory({ item, ...props }) {
   const parsed = parse(item.pivot.created_at)
   const date = formatDistance(parsed, new Date())
 
-  console.log({item})
 
   return (
     <Container {...props}>

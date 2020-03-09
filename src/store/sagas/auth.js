@@ -6,11 +6,9 @@ import { AuthActions } from '../ducks/auth';
 
 export function* loadAuth({ username }) {
   try {
-    console.log({ username });
     const response = yield call(jwtService.login, username);
     yield put(AuthActions.loadAuthSuccess(response));
   } catch (e) {
-    console.log({ e });
     yield put(AuthActions.loadAuthFailure('Invalid user, try again'));
   }
 }

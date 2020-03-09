@@ -16,7 +16,7 @@ const ProfileIcon = ({ tintColor }) => (
 );
 
 const HistoryIcon = ({ tintColor }) => (
-  <TabIcon name="trophy" tintColor={tintColor} type="material" />
+  <TabIcon name="medal" tintColor={tintColor} type="material" />
 );
 
 const CodeIcon = ({ tintColor }) => (
@@ -24,7 +24,7 @@ const CodeIcon = ({ tintColor }) => (
 );
 
 const LeaderboardIcon = ({ tintColor }) => (
-  <TabIcon name="medal" tintColor={tintColor} type="material" />
+  <TabIcon name="podium" tintColor={tintColor} type="material" />
 );
 
 const ConfigIcon = ({ tintColor }) => (

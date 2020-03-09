@@ -22,7 +22,7 @@ export const StarContainer = styled.View`
 
 export const Icon = styled(MDIcon).attrs({
   size: 28,
-  name: 'star',
+  name: 'medal',
 })`
   color: ${colors.textPrimary};
 `;
