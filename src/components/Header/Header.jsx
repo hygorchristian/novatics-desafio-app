@@ -1,12 +1,16 @@
 import React from 'react';
+import { Platform } from 'react-native'
 
-import { Container, Label } from './styles';
+import { Container, Label, ExtraSpace } from './styles';
 
 function Header({ label, ...props }) {
   return (
-    <Container {...props}>
-      <Label>{label}</Label>
-    </Container>
+    <>
+      {Platform.OS === 'ios' && <ExtraSpace />}
+      <Container {...props}>
+        <Label>{label}</Label>
+      </Container>
+    </>
   )
 }
 

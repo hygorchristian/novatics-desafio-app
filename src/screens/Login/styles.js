@@ -5,10 +5,12 @@ import ButtonBase from '~/components/Button';
 import Montserrat from '~/components/Montserrat';
 import IconInput from '~/components/IconInput';
 
-export const Container = styled.View`
+export const Container = styled.ScrollView.attrs({
+  contentContainerStyle: {
+    alignItems: 'center',
+  },
+})`
   flex: 1;
-  flex-direction: column;
-  align-items: center;
   background-color: ${colors.background};
 `;
 
@@ -23,6 +25,7 @@ export const Image = styled.Image.attrs({
 export const Content = styled.View`
   background-color: #323344;
   flex: 1;
+  height: 420px;
   width: 100%;
   align-items: center;
 `;

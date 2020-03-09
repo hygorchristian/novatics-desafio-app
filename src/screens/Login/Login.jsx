@@ -44,6 +44,7 @@ function Login() {
           value={username}
           onChangeText={value => setUsername(value)}
           icon="github-face"
+          autoCapitalize="none"
         />
         <Button onPress={handleLogin}>Login</Button>
       </Content>
