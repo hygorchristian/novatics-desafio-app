@@ -4,15 +4,15 @@
 
 ## :book: Sumary
 
-- [About this Project]()
-- [Why?]()
-- [Features]()
-- [Getting Started]()
+- [About this Project](https://github.com/hygorchristian/novatics-desafio-app#speech_balloon-about-this-project)
+- [Why?](https://github.com/hygorchristian/novatics-desafio-app#thinking-why)
+- [Features](https://github.com/hygorchristian/novatics-desafio-app#white_check_mark-features)
+- [Getting Started](https://github.com/hygorchristian/novatics-desafio-app#rocket-getting-started)
     - [Android]()
     - [iOS]()
-- [Dependencies ans Tools]()
-- [Support tools]()
-- [License]()
+- [Dependencies ans Tools](https://github.com/hygorchristian/novatics-desafio-app#gear-dependencies-ans-tools)
+- [Support tools](https://github.com/hygorchristian/novatics-desafio-app#wrench-support-tools)
+- [License](https://github.com/hygorchristian/novatics-desafio-app#book-license)
 
 ## :speech_balloon: About this Project
 
@@ -79,7 +79,7 @@ $ npm install
 
 With all dependencies installed and the environment properly configured, you can now run the app
 
-###Android
+### Android
 
 ```
 $ react-native run-android
@@ -92,7 +92,7 @@ $ yarn android
 ```
 
 
-###iOS
+### iOS
 
 ```
 $ react-native run-ios

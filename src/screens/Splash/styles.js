@@ -19,12 +19,13 @@ export const LogoContainer = styled.View`
   flex: 1;
 `;
 
-export const Logo = styled.Image.attrs({
+export const Image = styled.Image.attrs({
   objectFit: 'contain',
 })`
   width: ${SCREEN_WIDTH - 80};
   height: ${SCREEN_WIDTH - 80};
   background-color: black;
+  margin-bottom: 16px;
 `;
 
 export const Text = styled(Montserrat).attrs({
