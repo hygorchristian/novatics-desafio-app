@@ -19,7 +19,7 @@
     "axios": "^0.19.2",
     "date-fns": "^2.10.0",
     "jwt-decode": "^2.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "postgres-date": "^1.0.4",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
